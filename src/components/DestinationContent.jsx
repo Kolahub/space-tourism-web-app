@@ -16,7 +16,7 @@ function DestinationContent({ data }) {
     from: { transform: 'rotate(0deg)' },
     to: { transform: 'rotate(360deg)' },
     loop: { reverse: true },
-    config: { duration: 80000 },  // 4 seconds for a complete orbit
+    config: { duration: 150000 },  // 4 seconds for a complete orbit
   });
 
   const fade = useSpring({
