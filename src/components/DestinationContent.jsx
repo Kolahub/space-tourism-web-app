@@ -55,7 +55,7 @@ function DestinationContent({ data }) {
         <animated.div className="my-10 text-white max-w-96" style={fade}>
           <div>
             <h1 className="font-unique uppercase text-7xl sm:text-8xl">{selectedPlace.name}</h1>
-            <p className="text-xl text-gray-300">{selectedPlace.description}</p>
+            <p className="text-lg md:text-xl text-gray-300">{selectedPlace.description}</p>
           </div>
         </animated.div>
 

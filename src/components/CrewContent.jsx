@@ -19,11 +19,11 @@ function CrewContent({ data }) {
         reverse: false,
     });
 
-    const orbit = useSpring({
+    const fadeTwo = useSpring({
         from: { opacity: '0' },
         to: { opacity: '1' },
         reset: true,
-        config: { duration: 1000 },  // 4 seconds for a complete orbit
+        config: { duration: 1000 },  // 1 seconds for a complete fadeTwo
     });
 
     return (
@@ -31,7 +31,7 @@ function CrewContent({ data }) {
             <div className=" md:max-w-[612px] lg:w-1/2">
                 <animated.div style={fade} className="my-16 lg:my-32 text-center lg:text-start">
                     <h2 className='font-unique uppercase text-3xl text-gray-500 mb-4'>{selectedCrew.role}</h2>
-                    <h1 className='font-unique uppercase text-4xl lg:text-6xl mb-4 lg:mb-6 text-white'>{selectedCrew.name}</h1>
+                    <h1 className='font-unique uppercase text-3xl lg:text-5xl mb-4 lg:mb-6 text-white'>{selectedCrew.name}</h1>
                     <p className='text-lg sm:text-xl md:text-2xl font-thin text-gray-100'>{selectedCrew.bio}</p>
                 </animated.div>
                 <div className="">
@@ -48,7 +48,7 @@ function CrewContent({ data }) {
             </div>
 
             <div className="w-[271.24px] md:w-[446.74px] lg:w-1/2">
-                <animated.img src={selectedCrew.images.png} alt="" className='w-full' style={orbit} />
+                <animated.img src={selectedCrew.images.png} alt="" className='w-full' style={fadeTwo} />
             </div>
         </div>
     );

@@ -23,9 +23,27 @@ function HeaderTab() {
     navStyle += " w-2/3";
   }
 
+  let list = [
+    {
+      title: "Home",
+      href: "",
+    },
+    {
+      title: "Destination",
+      href: "destination",
+    },
+    {
+      title: "Crew",
+      href: "crew",
+    },
+    {
+      title: "Technology",
+      href: "technology",
+    },
+  ];
   return (
     <>
-      <header className="fixed z-50 pl-6 md:pl-14 flex items-center md:items-end  w-full font-custom h-[8.5rem]">
+      <header className="absolute z-50 pl-6 md:pl-14 flex items-center md:items-end  w-full font-custom h-[8.5rem]">
         <div className="flex justify-between gap-5 md:gap-8 items-center w-full">
           <div className="relative flex items-center md:w-full">
             <NavLink to="">
@@ -43,39 +61,24 @@ function HeaderTab() {
           <nav className={navStyle}>
             <div className="sm:block pl-10 sm:px-8 md:px-20">
               <ul className="text-white text-2xl lg:text-3xl flex flex-col sm:flex-row justify-center md:justify-end gap-12 sm:gap-4 lg:gap-10 lg:pl-20 pl-0 mt-32 sm:mt-0">
-                <NavLink
-                  to={""}
-                  className={({ isActive }) =>
-                    isActive ? activeStyle : normalStyle
-                  }
-                  end
-                >
-                  <span className="mr-3 font-semibold">00</span>Home
-                </NavLink>
-                <NavLink
-                  to={"destination"}
-                  className={({ isActive }) =>
-                    isActive ? activeStyle : normalStyle
-                  }
-                >
-                  <span className="mr-3 font-semibold">01</span>Destination{" "}
-                </NavLink>
-                <NavLink
-                  to={"crew"}
-                  className={({ isActive }) =>
-                    isActive ? activeStyle : normalStyle
-                  }
-                >
-                  <span className="mr-3 font-semibold">02</span>Crew
-                </NavLink>
-                <NavLink
-                  to={"technology"}
-                  className={({ isActive }) =>
-                    isActive ? activeStyle : normalStyle
-                  }
-                >
-                  <span className="mr-3 font-semibold">03</span>Technology
-                </NavLink>
+                {list.map((elem, i) => {
+                  return (
+                    <NavLink
+                      onClick={(navStyle += " w-0")}
+                      key={elem.title}
+                      to={elem.href}
+                      end={i === 0 ? true : undefined}
+                      className={({ isActive }) =>
+                        isActive ? activeStyle : normalStyle
+                      }
+                    >
+                      <span className="mr-3 font-semibold">
+                        {`${i}`.padStart(2, 0)}
+                      </span>
+                      {elem.title}
+                    </NavLink>
+                  );
+                })}
               </ul>
             </div>
           </nav>

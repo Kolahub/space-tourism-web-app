@@ -7,9 +7,9 @@ function Crew() {
   const data = useLoaderData()
 
   return (
-    <section className="font-custom bg-[url('/crew/background-crew-mobile.jpg')] md:bg-[url('/crew/background-crew-tablet.jpg')] lg:bg-[url('/crew/background-crew-desktop.jpg')] bg-cover h-full pt-32 lg:pt-48 px-11 lg:pb-20 pb-24" id="Crew">
+    <section className="font-custom bg-[url('/crew/background-crew-mobile.jpg')] md:bg-[url('/crew/background-crew-tablet.jpg')] lg:bg-[url('/crew/background-crew-desktop.jpg')] bg-cover h-full pt-32 lg:pt-48 px-6 md:px-11 lg:pb-20 pb-24" id="Crew">
       <div className="max-w-5xl mx-auto">
-      <p className="text-white text-3xl tracking-widest"><span className="font-bold text-gray-600 mr-3 tracking-widest">02</span>MEET YOUR CREW</p>
+      <p className="text-white text-2xl sm:text-3xl tracking-widest"><span className="font-bold text-gray-600 mr-3 tracking-widest">02</span>MEET YOUR CREW</p>
         <CrewContent data ={data} />
       </div>
     </section>
