@@ -18,7 +18,7 @@ function Destination() {
 export default Destination
 
 export async function Loader () {
-  const res = await fetch('http://localhost:3000/destinations')
+  const res = await fetch('https://space-tourism-web-app-sigma.vercel.app/destinations')
   if(!res.ok) throw json({message: 'Failed to load destination data.'}, {status: 500})
   return res
 }
