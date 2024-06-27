@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <section
-      className="font-custom bg-[url('/home/background-home-mobile.jpg')]  md:bg-[url('/home/background-home-tablet.jpg')]  lg:bg-[url('/home/background-home-desktop.jpg')] bg-cover h-[130vh] lg:h-screen pt-32 md:pt-44 px-6 md:px-24"
+      className="font-custom bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover h-[130vh] lg:h-screen pt-32 md:pt-44 px-6 md:px-24"
       id="Home">
       <animated.div style={textAnimation} className="flex flex-col lg:flex-row justify-between gap-16 items-center lg:items-end lg:h-[25rem]">
         <div className="lg:w-1/2 flex flex-col gap-6 text-white text-center lg:text-start">
